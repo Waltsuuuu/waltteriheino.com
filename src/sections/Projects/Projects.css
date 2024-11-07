@@ -1,0 +1,148 @@
+#projects {
+  margin-top: 8rem;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.project-text-p1 {
+  text-align: center;
+}
+
+.project-section-title {
+  font-size: 3rem;
+  text-align: center;
+}
+ 
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: 90%;
+}
+
+.project-title {
+  margin: 1rem;
+  color: black;
+}
+
+.project-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+
+.btn-color-1 {
+  color: white;
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.source-code {
+  padding-bottom: 1rem;
+}
+
+.source-code:hover {
+  cursor: pointer;
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.project-container {
+  display: flex;
+  gap: 20px;
+  width: auto; 
+  justify-content: center;
+  transition: transform 0.5s ease;
+  overflow: hidden;
+}
+
+.single-project-container {
+  width: 100%;
+  max-width: 300px;
+  padding: 1.5rem;
+  flex: 1;
+  background: #FAFAFA;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.carousel-nav {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for exact centering */
+}
+
+.carousel-nav.left {
+  left: 10px; /* Position left button just outside the project container */
+}
+
+.carousel-nav.right {
+  right: 10px; /* Position right button just outside the project container */
+}
+
+/* Tablet View: 2 projects per view */
+@media (max-width: 1024px) {
+  .project-container {
+    gap: 15px;
+    max-width: 600px; /* Adjust max width to fit two projects */
+  }
+
+  .carousel-container {
+    padding: 0;
+  }
+
+  .single-project-container {
+    max-width: 280px; /* Adjust width for two items */
+  }
+}
+
+/* Mobile View: 1 project per view */
+@media (max-width: 768px) {
+  #projects {
+    margin-top: 5rem; /* Adjust margin for smaller screens */
+    padding-bottom: 0;
+  }
+  
+  .project-container {
+    max-width: auto; /* Adjust max width to fit a single project */
+    gap: 10px;
+  }
+
+  .carousel-container {
+    padding: 0;
+  }
+
+  .single-project-container {
+    max-width: 100%; /* Take full width for single project */
+    margin: 1rem;
+  }
+
+  .carousel-nav.left,
+  .carousel-nav.right {
+    top: 40%; /* Move navigation buttons closer to the bottom on mobile */
+    font-size: 20px; /* Adjust button size for smaller screens */
+    padding: 20px;
+  }
+}
